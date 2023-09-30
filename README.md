@@ -1,2 +1,2 @@
 # TEACHHIRE.COM
-process of hiring teachers
+Process of hiring for teachers
