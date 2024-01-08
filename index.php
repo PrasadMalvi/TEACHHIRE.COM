@@ -24,7 +24,7 @@
     />
 
     <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css2/bootstrap.css" />
 
     <!-- fonts style -->
     <link
@@ -34,7 +34,7 @@
     <!-- Custom styles for this template -->
     <link href="css2/style.css" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css2/responsive.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -43,7 +43,7 @@
       <header class="header_section">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
               <span>
                 TEACHHIRE.COM
               </span>
@@ -52,15 +52,23 @@
             <div class="navbar-collapse" id="">
               <div
                 class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
-                <form class="form-inline mb-3 mb-lg-0 ">
-                  <button
-                    class="btn  my-sm-0 nav_search-btn"
-                    type="submit"
-                  ></button>
-                </form>
-                <ul class="navbar-nav  mr-5">
+				<ul class="navbar-nav  mr-5">
                   <li class="nav-item mr-5">
-                    <a class="nav-link" href="service.html">
+                    <a class="nav-link" href="contact.php">
+                      <span>About Us</span>
+                    </a>
+                  </li>
+                </ul>
+				 <ul class="navbar-nav  mr-5">
+                  <li class="nav-item mr-5">
+                    <a class="nav-link" href="job_details.php">
+                      <span>Job Details</span>
+                    </a>
+                  </li>
+                </ul>
+				  <ul class="navbar-nav  mr-5">
+                  <li class="nav-item mr-5">
+                    <a class="nav-link" href="logs.php">
                       <span>Login</span>
                     </a>
                   </li>
@@ -75,8 +83,12 @@
                 </button>
               </div>
               <div id="myNav" class="overlay">
-                <div class="overlay-content">
-                  <h1>Stay Hungry Stay Foolish</h1>
+                <div class="overlay-content"><h4>TEACHHIRE.COM</h4>
+				<h5>CHOOSE THE OPTION FROM BELOW</h5>
+                  <a href="contact.php">About US</a>
+                  <a href="job_details.php">job Details</a>
+				  <a href="logs.php">login</a>
+                  
                 </div>
               </div>
             </div>
@@ -187,7 +199,7 @@
 	  TEACHHIRE.COM has been a valuable recruitment partner for us in helping us bring some of the best talent on board. I know when I interview an ABC recommended candidate, they would already have been vetted as a suitable fit within our company and its culture
           </p>
           <div>
-            <a href="">
+            <a href="contact.php">
               Read More
             </a>
           </div>
@@ -206,8 +218,8 @@
     </section>
     <!-- footer section -->
 
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js3/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js3/bootstrap.js"></script>
 
     <script>
       function openNav() {

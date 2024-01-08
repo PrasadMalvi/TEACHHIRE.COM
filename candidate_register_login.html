@@ -1,0 +1,308 @@
+
+
+<style>
+	a, A:link, a:visited, a:active
+		{color: #0000aa; text-decoration: none; font-family: Tahoma, Verdana; font-size: 11px}
+	A:hover
+		{color: #ff0000; text-decoration: none; font-family: Tahoma, Verdana; font-size: 11px}
+	p, tr, td, ul, li
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px}
+	th
+		{background: #DBEAF5; color: #000000;}
+	.header1, h1
+		{color: #ffffff; background: #4682B4; font-weight: bold; font-family: Tahoma, Verdana; font-size: 13px; margin: 0px; padding-left: 2px; height: 21px}
+	.header2, h2
+		{color: #000000; background: #DBEAF5; font-weight: bold; font-family: Tahoma, Verdana; font-size: 12px;}
+	.intd
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px; padding-left: 15px;}
+	.wcell
+		{background: #FFFFFF; vertical-align: top}
+	.ctrl
+		{font-family: Tahoma, Verdana, sans-serif; font-size: 12px; width: 100%;}
+	.btnform
+		{border: 0px; font-family: tahoma, verdana; font-size: 12px; background-color: #DBEAF5; width: 100%; height:18px; text-align: center; cursor: hand;}
+	.btn
+		{background-color: #DBEAF5; padding: 0px;}
+	textarea, select,input
+		{font: 9px Verdana, arial, helvetica, sans-serif; background-color: #DBEAF5;}
+		
+	/* classes for validator */
+	.tfvHighlight
+		{font-weight: bold; color: red;}
+	.tfvNormal
+		{font-weight: normal;	color: black;}
+</style>
+
+
+<script language="javascript" type="text/javascript">
+var k=11;
+var l=2;
+var column = 0;
+function addExperience()
+{
+	
+	var row=document.getElementById('tab1').insertRow(k);
+	var col1=row.insertCell(0);
+	var col2=row.insertCell(1);
+	var col3=row.insertCell(2);
+	var col4=row.insertCell(3);
+	var col5=row.insertCell(4);
+	var col6=row.insertCell(5);
+	var col7=row.insertCell(6);
+	var col8=row.insertCell(7);
+	col1.innerHTML="<td colspan=\"2\" id=\"t_company_name"+l+"\">&nbsp;Company Name "+l+":</td>";
+	col3.innerHTML="<td colspan=\"6\"><input type=\"text\" name=\"company_name"+l+"\" size=\"135\" class=\"ctrl\"></td>";
+	k++;
+	var row=document.getElementById('tab1').insertRow(k);
+	row.bgcolor="#FFFFFF";
+	var col1=row.insertCell(0);
+	var col2=row.insertCell(1);
+	var col3=row.insertCell(2);
+	var col4=row.insertCell(3);
+	var col5=row.insertCell(4);
+	var col6=row.insertCell(5);
+	var col7=row.insertCell(6);
+	var col8=row.insertCell(7);
+	col1.innerHTML="<td colspan=\"2\" id=\"t_designation"+l+"\">&nbsp;Designation:</td>";
+	col3.innerHTML="<td colspan=\"2\"><input type=\"text\" name=\"designation"+l+"\" size=\"30\" class=\"ctrl\"></td>";
+	col5.innerHTML="<td id=\"t_experience"+l+"\" width=\"10%\">&nbsp; Exrperience:</td>";
+	col6.innerHTML="<td width=\"10%\" colspan=\"2\"><input type=\"text\" name=\"experience"+l+"\" class=\"ctrl\" size=\"30\"></td>";
+	k++;
+	l++;
+	column +=2;
+}
+			
+//Function to add Dynamic Functional requirements...
+var i=14;
+var j=2;
+function addDegree()
+{
+	//alert(i);
+	i += column;
+	//alert(column);
+	//alert(i);
+	var row=document.getElementById('tab1').insertRow(i);
+	var col1=row.insertCell(0);
+	var col2=row.insertCell(1);
+	var col3=row.insertCell(2);
+	var col4=row.insertCell(3);
+	var col5=row.insertCell(4);
+	var col6=row.insertCell(5);
+	var col7=row.insertCell(6);
+	var col8=row.insertCell(7);
+	col1.innerHTML="<td colspan=\"2\" id=\"t_degree"+j+"\">&nbsp;Degree "+j+":</td>";
+	col3.innerHTML="<td colspan=\"2\"><input type=\"text\" name=\"degree"+j+"\" size=\"30\" class=\"ctrl\"></td>";
+	col5.innerHTML="<td id=\"t_university"+j+"\" width=\"10%\">&nbsp; University:</td>";
+	col6.innerHTML="<td width=\"10%\" colspan=\"2\"><input type=\"text\" name=\"university"+j+"\" class=\"ctrl\" size=\"30\"></td>";
+	i++;
+	var row=document.getElementById('tab1').insertRow(i);
+	row.bgcolor="#FFFFFF";
+	var col1=row.insertCell(0);
+	var col2=row.insertCell(1);
+	var col3=row.insertCell(2);
+	var col4=row.insertCell(3);
+	var col5=row.insertCell(4);
+	var col6=row.insertCell(5);
+	var col7=row.insertCell(6);
+	var col8=row.insertCell(7);
+	col1.innerHTML="<td colspan=\"2\" id=\"t_year_pass"+j+"\">&nbsp;Year of Passing:</td>";
+	col3.innerHTML="<td colspan=\"2\"><input type=\"text\" name=\"year_pass"+j+"\" size=\"30\" class=\"ctrl\"></td>";
+	col5.innerHTML="<td id=\"t_percentage"+j+"\" width=\"10%\">&nbsp; Percentage:</td>";
+	col6.innerHTML="<td width=\"10%\" colspan=\"2\"><input type=\"text\" name=\"percentage"+j+"\" class=\"ctrl\" size=\"30\"></td>";
+	i = 14;
+	j++;
+	column +=2;
+}
+</script>
+
+                        
+<form action="add_candidate.php" method="post" name="registration" onsubmit="return v.exec()">
+<table cellpadding="0" cellspacing="0" border="0" width="600" align="center">
+<tr>
+	<td bgcolor="#4682B4" width="10"><img src="img/pixel.gif" width="10" height="1" border="0"></td>
+	<td class="header1" nowrap>Register User<img src="img/pixel.gif" width="10" height="1" border="0"></td>
+	<td><img src="img/formtab_r.gif" width="10" height="21" border="0"></td>
+	<td background="img/line_t.gif" width="100%">&nbsp;</td>
+	<td background="img/line_t.gif"><img src="img/pixel.gif" width="10" height="1" border="0"></td>
+</tr>
+<tr>
+	<td background="img/line_l.gif"><img src="img/pixel.gif" border="0"></td>
+	<td colspan="3">
+	<img src="img/pixel.gif" width="1" height="10" border="0"><br>
+	<div align="center"
+	 id="error_registration" style="display: block;"></div>
+	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td bgcolor="#DBEAF5">
+		<table cellspacing="1" cellpadding="2" border="0" width="100%" id="tab1">
+       
+		<tr bgcolor="#ffffff">
+			<td id="t_first_name" width="20%" colspan="2">&nbsp;First Name:</td>
+			<td width="32%" colspan="2"><input type="text" name="js_fname" size="10" class="ctrl"></td>
+			<td id="t_last_name" width="16%">&nbsp; Last Name:</td>
+			<td width="32%" colspan="2"><input type="text" name="js_lname" size="10" class="ctrl"></td>
+		</tr>
+		<tr bgcolor="#ffffff">
+			<td id="t_first_name" width="20%" colspan="2">&nbsp;Middle Name:</td>
+			<td width="32%" colspan="5"><input type="text" name="js_mname" size="10" class="ctrl"></td>
+			
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2" id="t_mobile_no">&nbsp;Date of Birth:</td>
+			<td colspan="2"><input type="text" name="js_dob" size="10" class="ctrl"></td>
+			<td id="t_gender" width="10%">&nbsp; Gender:</td>
+			<td width="10%" colspan="2">
+				<select name="gender" class="ctrl">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select></td>	
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2" id="t_street_address">&nbsp;Street address:</td>
+			<td bgcolor="#ffffff" colspan="5"><input type="text" name="js_address" size="35" class="ctrl"></td>
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2" id="t_city">&nbsp;City:</td>
+			<td colspan="2"><input type="text" name="js_city" size="10" class="ctrl"></td>
+			<td id="t_post_code" width="10%">&nbsp; State:</td>
+			<td  colspan="2">			
+				<select name="js_state" class="ctrl">
+					<option value="" selected>-select-</option>
+						<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+						<option value="Andhra Pradesh">Andhra Pradesh</option>
+						<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+						<option value="Assam">Assam</option>
+						<option value="Bihar">Bihar</option>
+						<option value="Chandigarh">Chandigarh</option>
+						<option value="Chhattisgarh">Chhattisgarh</option>
+						<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+						<option value="Daman and Diu">Daman and Diu</option>
+						<option value="Delhi">Delhi</option>
+						<option value="Goa">Goa</option>
+						<option value="Gujarat">Gujarat</option>
+						<option value="Haryana">Haryana</option>
+						<option value="Himachal Pradesh">Himachal Pradesh</option>
+						<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+						<option value="Jharkhand">Jharkhand</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="Kerala">Kerala</option>
+						<option value="Lakshadweep">Lakshadweep</option>
+						<option value="Madhya Pradesh">Madhya Pradesh</option>
+						<option value="Maharashtra">Maharashtra</option>
+						<option value="Manipur">Manipur</option>
+						<option value="Meghalaya">Meghalaya</option>
+						<option value="Mizoram">Mizoram</option>
+						<option value="Nagaland">Nagaland</option>
+						<option value="Orissa">Orissa</option>
+						<option value="Pondicherry">Pondicherry</option>
+						<option value="Punjab">Punjab</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Sikkim">Sikkim</option>
+						<option value="Tamil Nadu">Tamil Nadu</option>
+						<option value="Tripura">Tripura</option>
+						<option value="Uttaranchal">Uttaranchal</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="West Bengal">West Bengal</option>
+				</select>
+</td>	
+		</tr>
+		<tr bgcolor="#ffffff">
+			<td colspan="2" id="t_state">&nbsp;Pincode:</td>
+			<td colspan="2"><input type="text" name="js_pincode" class="ctrl" size="10">
+			<td colspan="2" id="t_mobile_no">&nbsp;Phone No:</td>
+			<td colspan="2"><input type="text" name="js_phone_no" size="10" class="ctrl"></td>
+			</td>
+			
+		</tr>
+		<tr bgcolor="#ffffff"> 
+		<td colspan="2" id="t_mobile_no">&nbsp;Mobile No:</td>
+			<td colspan="2"><input type="text" name="js_mobile_no" size="10" class="ctrl"></td>
+			
+			<td id="t_class" width="10%">&nbsp; Category:</td>
+			<td width="10%" colspan="2">
+				<input type="text" name="class" size="10" class="ctrl"></td>	
+		</tr>
+		
+		<tr bgcolor="#ffffff"> 
+		 <td colspan="2" id="t_email">&nbsp;Email:</td>
+			<td colspan="5"><input type="text" name="js_e_mail" size="35" class="ctrl"></td>
+		
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="7" align="center">&nbsp;<b><em>Educational Details</em></b> </td>
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2" id="t_degree">&nbsp;Qualification Name:</td>
+			<td colspan="2"><input type="text" name="q_name " size="10" class="ctrl"></td>
+			<td id="t_university" width="10%">&nbsp; University:</td>
+			<td width="10%" colspan="2"><input type="text" name="university_name" class="ctrl" size="5"></td>	
+		</tr>
+		<tr bgcolor="#ffffff"> 
+		    <td colspan="2" id="t_university">&nbsp; College Name:</td>
+			<td width="10%" colspan="2"><input type="text" name="coll_name" class="ctrl" size="5"></td>
+			<td colspan="2" id="t_university" width="10%">&nbsp; Year Of Passing:</td>
+			<td width="10%" colspan="2"><input type="text" name="year_of_passing" class="ctrl" size="5"></td>		
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2" id="t_year_pass">&nbsp;Total Marks:</td>
+			<td colspan="2"><input type="text" name="tot_marks" size="10" class="ctrl"></td>
+			<td id="t_percentage" width="10%">&nbsp; Obtained Marks:</td>
+			<td width="10%" colspan="2"><input type="text" name="obtain_marks" class="ctrl" size="5"></td>	
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2" id="t_year_pass">&nbsp;Percentage</td>
+			<td colspan="2"><input type="text" name="perc" size="10" class="ctrl"></td>
+			<td id="t_percentage" width="10%">&nbsp; Grade:</td>
+			<td width="10%" colspan="2"><input type="text" name="grade" class="ctrl" size="5"></td>	
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2"><input type="button"  onclick="addDegree();" value="Add Degree" class="btnform" title="Click to Add Another Degree" style="background-color:#0099CC;"></td>
+			<td colspan="5"> Click to Add Another Degree </td>
+		</tr>
+		
+		
+		<tr bgcolor="#ffffff"> 
+			<td colspan="7" align="center">&nbsp;<b><em>Past Experience & Degree Details</em></b> </td>
+		</tr>
+		<tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2" id="t_company_name">&nbsp;Experience Name:</td>
+			<td colspan="2"><input type="text" name="exp_name" size="35" class="ctrl"></td>
+			<td colspan="2" id="t_designation">&nbsp;Description:</td>
+			<td colspan="2"><input type="text" name="exp_descip" size="10" class="ctrl"></td>
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			
+			<td id="t_experience" >&nbsp; From Date:</td>
+			<td width="10%" colspan="2"><input type="text" name="from_date" class="ctrl" size="5"></td>	
+			<td colspan="2" id="t_designation">&nbsp;To Date:</td>
+			<td colspan="2"><input type="text" name="to_date" size="10" class="ctrl"></td>
+		</tr>
+		<tr bgcolor="#ffffff"> 
+			<td colspan="2"><input type="button"  onclick="addExperience();" value="Add Experience" class="btnform" title="Click to Add Another Candidate Experience" style="background-color:#0099CC;"></td>
+			<td colspan="5"> Click to Add Another Candidate Company Experience </td>
+		</tr>
+		
+		
+		
+		
+		
+		
+		</table></td></tr></table>
+		<img src="img/pixel.gif" width="1" height="10" border="0"><br>
+	</td>
+	<td background="img/line_r.gif"><img src="img/pixel.gif" border="0"></td>
+	</tr>
+<tr>
+	<td width="10"><img src="img/formtab_b.gif" width="10" height="20" border="0"></td>
+	<td bgcolor="#4682B4" colspan="4" align="right">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="btn" width="100"><input type="submit" name="Submit" value="Save" class="btnform"></td>
+		<td width="1"><img src="img/pixel.gif" width="1" height="18" border="0"></td>
+		<td class="btn" width="100"><input type="reset" name="Reset" value="Reset" class="btnform"></td>		
+		<td width="1"><img src="img/pixel.gif" width="1" height="18" border="0"></td>
+	</tr>
+	</table>
+	</td>
+</tr>
+</table>
+</form>				
